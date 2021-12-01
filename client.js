@@ -43,17 +43,16 @@ const connect = function () {
   conn.on("connect", () => {
     console.log(`Sucessfully connected to game server`);
     conn.write("Name: Jon");
-  });
 
+    //Key strokes for moving the snake
+    conn.write("Name:Jon");
+  });
   //handles incoming data from the server
   conn.on("data", function (message) {
     console.log("server sent:", message);
   });
   return conn;
 };
-
-console.log("Connecting ...");
-connect();
 
 module.exports = connect;
 
